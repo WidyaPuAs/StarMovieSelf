@@ -374,6 +374,7 @@ body {
         font-size: 13px;
         flex-direction: column;
         padding-left: 30;
+        margin: 0;
         padding-top: 10;
     }
     .radio .dont{
