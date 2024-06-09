@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarMovie Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <div class="headline">
+            <h1 class="head">StarMovie <span>Collection</span></h1>
+        </div>
+        <div class="hero">
+            <div class="left">
+                <div class="searchbar">
+                    <input type="text" readonly onclick="showCustomAlert('Maaf, Fitur ini masih dalam masa pengembangan!')" placeholder="Search.." name="search">
+                    <button type="submit">
+                        <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+                            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="inp-data">
+                    <form class="formmovie" id="movieForm" method="post">
+                        <h1 class="txtmsuk">Masukkan Movie Baru</h1>
+                        <div class="input">
+                            <input type="text" id="judul" placeholder="Judul Movie" name="judul">
+                            <input type="text" id="sutradara" placeholder="Sutradara" name="sutradara">
+                            <input type="text" id="tahun" placeholder="Tahun Rilis" name="tahun">
+                        </div>
+                        <div class="radio">
+                            <div class="done">
+                                <input type="radio" id="sudah-selesai" name="status">
+                                <label for="sudah-selesai">Selesai ditonton</label>
+                            </div>
+                            <div class="dont">
+                                <input type="radio" id="belum-selesai" name="status">
+                                <label for="belum-selesai">Belum selesai ditonton</label>
+                            </div>
+                        </div>
+                        <button type="button" onclick="tambahMovie()">Tambah Movie</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div class="done-read">
+                    <h1>Selesai ditonton</h1>
+                    <div class="cont-oke"></div>
+                </div>
+                <div class="no-read">
+                    <h1>Belum Selesai ditonton</h1>
+                    <div class="cont-not-oke"></div>
+                </div>
+            </div>
+        </div>
+        <div id="customAlert" class="custom-alert">
+            <h3 class="txtalert">Alert!</h3>
+            <p id="customAlertMessage"></p>
+            <button class="btnclose">Shapp!</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
